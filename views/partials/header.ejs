@@ -1,0 +1,56 @@
+<link href="../public/style.css" rel="stylesheet" />
+<div class="container">
+  <header
+    class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+  >
+    <a
+      href="/"
+      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+    >
+      <img
+        src="/logo1.svg"
+        height="20px"
+        style="border-radius: 50%; margin-right: 10px"
+      />
+
+      <span class="fs-4"> Verse</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <form method="post" action="/">
+          <a
+            href="/"
+            class="nav-link <%= currentPath === '/' ? 'active' : '' %>"
+            aria-current="page"
+            >Home</a
+          >
+        </form>
+      </li>
+      <li class="nav-item">
+        <a
+          href="/feature"
+          class="nav-link <%= currentPath === '/feature' ? 'active' : '' %>"
+          >Features</a
+        >
+      </li>
+      <% let dummy = ''; %> <% if(currentPath === '/create&view' || currentPath
+      === '/create') { %> <% dummy = 'active'; %> <% } %>
+      <li class="nav-item">
+        <a href="/create&view" class="nav-link <%= dummy %>">Create/View</a>
+      </li>
+      <li class="nav-item">
+        <a
+          href="/faqs"
+          class="nav-link <%= currentPath === '/faqs' ? 'active' : '' %>"
+          >FAQs</a>
+      </li>
+      <li class="nav-item">
+        <a
+          href="/about"
+          class="nav-link <%= currentPath === '/about' ? 'active' : '' %>"
+          >About</a>
+      </li>
+    </ul>
+  </header>
+</div>
