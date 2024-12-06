@@ -3,10 +3,12 @@
 }
 .feature-title {
   margin-left: 97px;
-
-  font-weight: 700;
+ font-weight: bold;
+ font-family: "BebasNeueRegular", "Mont", "Fontfabric-Notdef", sans-serif;
+ font-weight: 700;
 }
 .feature-description {
+  
   margin-left: 100px;
   margin-right: 100px;
 }
