@@ -58,6 +58,12 @@ app.post("/delete/:id", (req, res) => {
   res.redirect("/create&view");
 });
 
+app.get("/delete/:id", (req,res) => {
+  const postId = parseInt(req.params.id);
+  posts = posts.filter((post) => post.id !== postId);
+  res.redirect("/create&view");
+});
+
 app.get("/view/:id", (req, res) => {
   const postId = parseInt(req.params.id);
   const post = posts.find((post) => post.id === postId);
