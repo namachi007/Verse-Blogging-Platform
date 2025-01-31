@@ -14,5 +14,8 @@
     "bootstrap-icons": "^1.11.3",
     "ejs": "^3.1.10",
     "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }

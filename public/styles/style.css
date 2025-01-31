@@ -3,12 +3,17 @@
 }
 .feature-title {
   margin-left: 97px;
- font-weight: bold;
- font-family: "BebasNeueRegular", "Mont", "Fontfabric-Notdef", sans-serif;
- font-weight: 700;
+  font-weight: bold;
+  font-family: "BebasNeueRegular", "Mont", "Fontfabric-Notdef", sans-serif;
+  font-weight: 700;
 }
+
+.class1 {
+  height: 100px;
+  width: 100px;
+}
+
 .feature-description {
-  
   margin-left: 100px;
   margin-right: 100px;
 }
@@ -145,37 +150,95 @@ textarea:focus {
   grid-row: span 2;
   display: grid;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .cta-button {
   display: inline-block;
-  background: linear-gradient(
-    135deg,
-    #6f42c1,
-    #007bff
-  ); 
+  background: linear-gradient(135deg, #6f42c1, #007bff);
   color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 12px 30px; 
+  padding: 12px 30px;
   border-radius: 12px;
   font-size: 16px;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
-  background: linear-gradient(
-    135deg,
-    #5a36a2,
-    #0056b3
-  ); 
+  background: linear-gradient(135deg, #5a36a2, #0056b3);
   transform: translateY(-3px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); 
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.featured-image {
+  max-width: 90vw;
+  height: auto;
+  max-height: 60vh;
+  margin: 2rem auto;
+}
+
+@media (min-width: 768px) {
+  .featured-image {
+    max-width: 600px;
+    max-height: 400px;
+  }
 }
 
 .cta-button:active {
   transform: translateY(1px);
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.featured-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.showcase-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+@media (max-width: 992px) {
+  .featured-image {
+    max-height: 300px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-entry {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
 }
