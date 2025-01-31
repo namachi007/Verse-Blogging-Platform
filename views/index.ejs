@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Verse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body>
     <%- include("partials/header.ejs") %>
@@ -27,16 +29,17 @@
             style="height: 300px; width: 420px"
           />
         </div>
-        <h3 class="fs-2 text-body-emphasis">Literary Sanctuary</h3>
+        <h3 class="fs-2 text-body-emphasis  pb-3">Literary Sanctuary</h3>
         <p>
-          What secrets do books hold? Join us as we uncover the<br />
-          hidden meanings and messages within the pages.
+          What secrets do books hold? Join us as we uncover the meanings...
         </p>
         <a href="#" class="icon-link">
           Read More →
           <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
         </a>
       </div>
+
+
       <div class="feature col">
         <div
           class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
@@ -47,19 +50,80 @@
             style="height: 300px; width: 420px"
           />
         </div>
-        <h3 class="fs-2 text-body-emphasis">Voyager's Journey</h3>
+        <h3 class="fs-2 text-body-emphasis  pb-3">Voyager's Journey</h3>
         <p>
-          The Voyager probes have been exploring the outer reaches<br />
-          of our solar system for over 40 years.Learn about the history<br />
-          of the Voyager missions, their scientific discoveries, and the<br /> ongoing
-          journey.
+          The Voyager probes have been exploring the outer reaches of our solar system for over 40 years.Learn about the history of the Voyager missions, their scientific discoveries, and the ongoing journey...
         </p>
         <a href="#" class="icon-link">
           Read More→
           <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
         </a>
       </div>
+
+
       <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+        >
+          <img
+            src="https://cupofjo.com/wp-content/uploads/2024/11/TatjanaZlatkovic.jpg"
+            style="height: 300px; width: 420px"
+          />
+        </div>
+        <h3 class="fs-2 text-body-emphasis  pb-3">Have a Loving Weekend.</h3>
+        <p>
+          What are your plans for the weekend? I’m excited to go on upstate to crunch through the fall leaves.
+        </p>
+        <a href="#" class="icon-link">
+          Read More→
+          <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+        </a>
+      </div>
+
+
+
+      <div class="feature col pt-10">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+        >
+          <img
+            src="https://cupofjo.com/wp-content/uploads/2025/01/Ice-Skating.jpg"
+            style="height: 300px; width: 420px"
+          />
+        </div>
+        <h3 class="fs-2 text-body-emphasis  pb-3">A Motherhood Realization I Had While Ice Skating</h3>
+        <p>
+         We are at the public outdoor skating rink in our city, and it is cold, but I am hot. Sweat forms on my neck and torso. My body, prone to hot flashes now that I am in medical menopause...
+        </p>
+        <a href="#" class="icon-link">
+          Read More →
+          <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+        </a>
+      </div>
+
+
+      <div class="feature col pt-10">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+        >
+          <img
+            src="https://cupofjo.com/wp-content/uploads/2025/01/Aaron-Thomas.jpg"
+            style="height: 300px; width: 420px"
+          />
+        </div>
+        <h3 class="fs-2 text-body-emphasis pb-3">Last Week Was Incredible! I Visited the Most Beautiful Mountain</h3>
+        <p>
+          Last week was an unforgettable adventure ever! I had the chance to visit one of the most breathtaking mountains I’ve ever seen. Towering peaks, crisp mountain air, and endless
+        </p>
+        <a href="#" class="icon-link">
+          Read More →
+          <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+        </a>
+      </div>
+
+
+
+      <div class="feature col pt-10">
         <div
           class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
         >
@@ -68,10 +132,10 @@
             style="height: 300px; width: 420px"
           />
         </div>
-        <h3 class="fs-2 text-body-emphasis">Celestial View</h3>
+        <h3 class="fs-2 text-body-emphasis  pb-3">Celestial View</h3>
         <p>
-          NASA has recently released a breathtaking image of Earth<br /> captured from
-          space. The image, taken by a satellite orbiting<br /> our planet, showcases
+          NASA has recently released a breathtaking image of Earth captured from
+          space. The image, taken by a satellite orbiting our planet, showcases
           the intricate beauty of our world.
         </p>
         <a href="#" class="icon-link">
@@ -79,6 +143,10 @@
           <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
         </a>
       </div>
+
+
+
+
     </div>
 
     <div class="container my-5">
@@ -88,7 +156,7 @@
         <svg class="bi mt-5 mb-3" width="48" height="48">
           <use xlink:href="#check2-circle"></use>
         </svg>
-        <h1 class="text-body-emphasis">Create Your Own Post</h1>
+        <h1 class="text-body-emphasis body-text text-3xl pb-2">Create Your Own Post</h1>
         <p class="col-lg-6 mx-auto mb-4">
           Start sharing your insights and ideas with the world. Click below to
           create a new post effortlessly.

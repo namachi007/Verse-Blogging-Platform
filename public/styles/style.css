@@ -242,3 +242,87 @@ textarea:focus {
 .hover-scale:hover {
   transform: scale(1.02);
 }
+
+
+.headerSection {
+  margin-left: 25px;
+}
+
+.verse-text {
+  font-weight: 450;
+}
+
+
+
+
+body.view-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.view-page .container {
+  flex: 1;
+}
+
+
+
+
+
+@media (max-width: 992px) {
+  .createDiv {
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .form-input {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .createClass {
+    margin-left: 0;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .heiher {
+    height: 300px;
+  }
+
+  input, textarea {
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .form-input::placeholder {
+    font-size: 14px;
+  }
+
+  .createDiv form {
+    width: 100%;
+    max-width: 900px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heiher {
+    height: 250px;
+  }
+
+  .form-input {
+    font-size: 14px;
+  }
+
+  .createClass {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .heiher1 {
+    padding: 15px;
+  }
+}
