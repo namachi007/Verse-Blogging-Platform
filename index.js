@@ -1,6 +1,5 @@
 import express from "express";
 import { fileURLToPath } from "url";
-import serverless from "serverless-http";
 import path from "path";
 
 const __filename = fileURLToPath(import.meta.url);
