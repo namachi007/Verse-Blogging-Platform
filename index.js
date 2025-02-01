@@ -84,9 +84,14 @@ app.get("/view/:id", (req, res) => {
 });
 
 
-export const handler = serverless(app);
+app.get("/ping", (req, res) => {
+  console.log("Received /ping request");
+  res.send("pong");
+});
+
+
+export default app;
 
 
 
-  app.listen(port, () => console.log(`Local: http://localhost:${port}`));
 

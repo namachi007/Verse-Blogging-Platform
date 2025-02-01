@@ -4,9 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "build": "tailwindcss -i ./views/index.css -o ./public/styles/output.css --minify",
-    "dev": "nodemon index.js"
+    "dev": "nodemon server.js"  
   },
   "engines": {
     "node": ">=18.x"
