@@ -1,10 +1,19 @@
 import express from "express";
+import { fileURLToPath } from "url";
+import serverless from "serverless-http";
+import path from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
 let posts = [
   {
@@ -29,8 +38,8 @@ app.get("/feature", (req, res) => {
   res.render("feature.ejs", { currentPath: req.path });
 });
 
-app.get("/create&view", (req, res) => {
-  res.render("create&view.ejs", { currentPath: req.path, posts });
+app.get("/create-view", (req, res) => {
+  res.render("create-view.ejs", { currentPath: req.path, posts });
 });
 
 app.get("/faqs", (req, res) => {
@@ -49,19 +58,19 @@ app.post("/submit", (req, res) => {
   const { title, content } = req.body;
   const newPost = { id: posts.length + 1, title, content };
   posts.push(newPost);
-  res.redirect("/create&view");
+  res.redirect("/create-view");
 });
 
 app.post("/delete/:id", (req, res) => {
   const postId = parseInt(req.params.id);
   posts = posts.filter((post) => post.id !== postId);
-  res.redirect("/create&view");
+  res.redirect("/create-view");
 });
 
 app.get("/delete/:id", (req,res) => {
   const postId = parseInt(req.params.id);
   posts = posts.filter((post) => post.id !== postId);
-  res.redirect("/create&view");
+  res.redirect("/create-view");
 });
 
 app.get("/view/:id", (req, res) => {
@@ -74,6 +83,10 @@ app.get("/view/:id", (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Your server is Running on Server: ${port}`);
-});
+
+export const handler = serverless(app);
+
+
+
+  app.listen(port, () => console.log(`Local: http://localhost:${port}`));
+
